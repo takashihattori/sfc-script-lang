@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_154412) do
   create_table "students", force: :cascade do |t|
     t.string "name"
     t.integer "faculty_id"
+    t.integer "grade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
