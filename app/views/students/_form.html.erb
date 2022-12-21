@@ -22,8 +22,10 @@
   </div>
 
   <div>
-    <%= form.label :grade, style: "display: block" %>
-    <%= form.number_field :grade %>
+    <% for i in 1..4 %>
+      <%= form.radio_button :grade, i %>
+      <%= form.label :grade, "#{i}年", value: i %>
+    <% end %>
   </div>
   
   <div>
