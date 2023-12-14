@@ -1,0 +1,11 @@
+<h1>Courses#index</h1>
+
+<table>
+  <% @courses.each do |course| %>
+    <tr>
+      <td><%= course.name %></td>
+      <td><%= link_to '詳細', course_path(course) %></td>
+    </tr>
+  <% end %>
+</table>
+
