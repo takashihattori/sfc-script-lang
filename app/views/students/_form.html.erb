@@ -17,8 +17,13 @@
   </div>
 
   <div>
-    <%= form.label :faculty_id, style: "display: block" %>
-    <%= form.number_field :faculty_id %>
+    <%= form.label :faculty, style: "display: block" %>
+    <%= form.collection_select :faculty_id, Faculty.all, :id, :name %>
+  </div>
+
+  <div>
+    <%= form.label :grade, style: "display: block" %>
+    <%= form.number_field :grade %>
   </div>
 
   <div>
