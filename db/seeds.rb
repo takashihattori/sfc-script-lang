@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Faculty.create(name: '総合政策')
+Faculty.create(name: '環境情報')
+Course.create(name: '体育１', credit: 1, compulsory: true)
+Course.create(name: 'プログラミング言語論', credit: 2, compulsory: false)
