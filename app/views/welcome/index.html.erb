@@ -1,4 +1,4 @@
-<h1>Welcome#index</h1>
+<h1>スクリプト言語プログラミング基礎　サンプルアプリケーション</h1>
 
 <% if user_signed_in? %>
   <p>You are <%= current_user.email %></p>
@@ -6,3 +6,10 @@
 <% else %>
   <%= button_to 'Login', new_user_session_path %>
 <% end %>
+
+<ul>
+  <li><%= link_to '学生一覧', students_path %></li>
+  <li><%= link_to '科目一覧', courses_path %></li>
+  <li><%= link_to '成績一覧', scores_path %></li>
+  <li><%= link_to '成績による学生検索', search_students_path %></li>
+</ul>
