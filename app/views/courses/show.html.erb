@@ -1,0 +1,22 @@
+<h1>Courses#show</h1>
+
+<p>
+  <strong>科目名：</strong>
+  <%= @course.name %>
+</p>
+
+<p>
+  <strong>単位数：</strong>
+  <%= @course.credit %>
+</p>
+
+<p>
+  <% if @course.compulsory %>
+    <strong>必修科目</strong>
+  <% else %>
+    <strong>選択科目</strong>
+  <% end %>
+</p>
+
+<%= link_to 'Back', courses_path %>
+
