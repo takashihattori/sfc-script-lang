@@ -28,6 +28,11 @@
       <%= form.label :grade, "#{i}年", value: i %>
     <% end %>
   </div>
+
+  <div class="field">
+    <%= form.label :photo %>
+    <%= form.file_field :photo %>
+  </div>
   
   <div>
     <%= form.submit %>

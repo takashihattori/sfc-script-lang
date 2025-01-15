@@ -14,4 +14,12 @@
     <%= student.grade %>
   </p>
 
+  <p>
+    <% if student.photo.attached? %>
+      <%= image_tag url_for(student.photo), height: 100 %>
+    <% else %>
+      No Image
+    <% end %>
+  </p>
+
 </div>
