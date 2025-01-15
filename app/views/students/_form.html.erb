@@ -18,9 +18,17 @@
 
   <div>
     <%= form.label :faculty_id, style: "display: block" %>
-    <%= form.number_field :faculty_id %>
+    <%= form.collection_select :faculty_id, Faculty.all, :id, :name %>
   </div>
 
+  <div>
+    <%= form.label :grade, style: "display: block" %>
+    <% for i in 1..4 %>
+      <%= form.radio_button :grade, i %>
+      <%= form.label :grade, "#{i}年", value: i %>
+    <% end %>
+  </div>
+  
   <div>
     <%= form.submit %>
   </div>
