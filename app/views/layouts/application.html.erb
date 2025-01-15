@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= content_for(:title) || "School" %></title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -19,5 +20,6 @@
 
   <body>
     <%= yield %>
+    <br><%= image_tag "http://www.sfc.keio.ac.jp/img/logo.png", width: 300 %>
   </body>
 </html>
