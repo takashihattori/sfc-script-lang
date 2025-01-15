@@ -1,0 +1,19 @@
+<h1>成績を指定して学生を検索</h1>
+
+<%= form_with(url: result_students_path, method: :get) do |form| %>
+
+  <div>
+    <%= form.label :course, '科目' %>
+    <%= form.collection_select :course, Course.all, :id, :name %>
+  </div>
+
+  <div>
+    <%= form.label :score, '成績' %>
+    <%= form.select :score, {'S' => 'S', 'A' => 'A', 'B' => 'B', 'C' => 'C', 'D' => 'D'} %>
+  </div>
+
+  <div>
+    <%= form.submit '検索' %>
+  </div>
+
+<% end %>
